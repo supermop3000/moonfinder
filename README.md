@@ -1,6 +1,6 @@
 # **MoonFinder**
 
-MoonFinder is your **ultimate digital asset tracking platform**, revolutionizing how traders and investors manage their portfolios. With a suite of powerful features and a sleek design, MoonFinder empowers you to track, analyze, and optimize your crypto journey.
+MoonFinder is a digital asset tracking platform.
 
 ---
 
