@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">
-  <img src="images/moonfinder-logo.png" alt="MoonFinder Logo" width="30" style="vertical-align: middle; margin-right: 10px;">
-  MoonFinder
+  <img src="images/moonfinder-logo.png" alt="MoonFinder Logo" width="40" style="vertical-align: middle; margin-right: 10px;">
+  moonfinder
 </h1>
 
 <p style="text-align: center; font-style: italic; margin-bottom: 20px;">
@@ -40,7 +40,7 @@
   <img src="images/hootfolio4.png" width="300" style="margin: 10px;">
 </div>
 
-### **🤖 AI/ML Algorithm Testing** _(Coming Soon)_
+### **🤖 AI/ML Trading** _(Coming Soon)_
 
 - Backtest trading strategies using **AI/ML algorithms** on historical and live data.
 - Analyze performance metrics to refine your trading tactics.
@@ -83,6 +83,7 @@
 ### **Database**
 
 - **PostgreSQL**
+- All user data, hootfolio price history, chart data, coin images, coin cost data is stored in the PostgreSQL database.
 
 ### **AI/ML Frameworks**
 
