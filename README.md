@@ -35,8 +35,7 @@ MoonFinder is a digital asset tracking platform.
 ## **Technology Stack**
 
 ### **Frontend**
-- **React**
-- **JavaScript**
+- **React** / **JavaScript**
 - **CSS**
 
 ### **Backend**
