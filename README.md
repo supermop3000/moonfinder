@@ -1,4 +1,6 @@
 # **MoonFinder**
+![MoonFinder Logo](images/moonfinder-logo.png "MoonFinder Logo")
+
 
 MoonFinder is a digital asset tracking platform.
 
