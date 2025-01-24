@@ -35,12 +35,12 @@ MoonFinder is your **ultimate digital asset tracking platform**, revolutionizing
 ## **Technology Stack**
 
 ### **Frontend**
-- **React**: Dynamic and responsive UI.
-- **TypeScript**: Type-safe coding.
-- **CSS**: Sleek, customizable styling.
+- **React**
+- **JavaScript**
+- **CSS**
 
 ### **Backend**
-- **Node.js** (Express): Robust server-side processing.
+- **Node.js** (Express)
 - **Python**: Advanced NLP and blockchain interactions.
 
 ### **Blockchain**
@@ -48,11 +48,11 @@ MoonFinder is your **ultimate digital asset tracking platform**, revolutionizing
 - **Solidity**: Smart contract implementation for seamless swaps.
 
 ### **Database**
-- **PostgreSQL**: Reliable and scalable database.
+- **PostgreSQL**
 
 ### **AI/ML Frameworks**
-- **TensorFlow / PyTorch**: For trading strategy evaluation.
-- **spaCy**: NLP-powered document processing.
+- **TensorFlow / PyTorch**
+- **spaCy**: NLP-powered language processing
 
 ---
 
@@ -62,19 +62,6 @@ MoonFinder is your **ultimate digital asset tracking platform**, revolutionizing
 - **Advanced AI/ML tools**: Automated trading and market prediction models.
 - **Multi-asset wallet support**: Manage multiple assets seamlessly.
 - **Mobile app**: Access MoonFinder on the go with a dedicated mobile application.
-
----
-
-## **Contributing**
-
-We welcome contributions from the community! Here’s how you can help:
-1. **Fork the repository**.
-2. **Create a feature branch**:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. **Commit and push** your changes.
-4. Open a **pull request** on GitHub.
 
 ---
 
