@@ -4,7 +4,7 @@
 </h1>
 
 <p style="text-align: center; font-style: italic; margin-bottom: 20px;">
-  MoonFinder is a digital asset tracking platform
+  moonfinder is a digital asset tracking platform
 </p>
 
 <div align="center" style="margin: 30px 0;">
