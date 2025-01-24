@@ -1,0 +1,207 @@
+/* General Table Styling */
+.data-table2 {
+  width: 100%;
+  max-width: 1270px;
+  border-collapse: collapse;
+  background: #272527;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styling */
+.DataTable2-header {
+  background-color: #463d4f;
+  text-transform: uppercase;
+  color: #d1d1d1;
+  text-align: right;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  width: auto;
+  height: 60px !important;
+}
+
+.header-Rank {
+  width: 52px !important;
+  text-align: right;
+}
+
+.header-Coin {
+  text-align: left;
+}
+
+.header-Price,
+.header-1HR,
+.header-24HR,
+.header-7DAY,
+.header-Market-Cap,
+.header-Volume {
+  text-align: right;
+  padding-right: 20px;
+}
+
+/* Sorting Arrows */
+span.sort-arrow svg {
+  font-size: 0.55rem !important;
+}
+
+/* Data Styling */
+.data-Rank {
+  text-align: center;
+}
+
+.data-table2 .data-Rank .rank {
+  color: #d1d1d1;
+  font-weight: bold;
+}
+
+.data-table2 .data-Coin {
+  display: flex;
+  align-items: center;
+}
+
+.data-Price,
+.data-1HR,
+.data-24HR,
+.data-7DAY,
+.data-Market-Cap,
+.data-Volume {
+  text-align: right;
+  padding-right: 20px;
+}
+
+/* Coin Icon and Name Styling */
+.data-table2 .data-Coin img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.data-table2 .data-Coin .coin-name {
+  text-align: left;
+}
+
+/* Highlight Positive and Negative Percentages */
+.positive-percentage {
+  color: rgb(103, 198, 103);
+}
+
+.negative-percentage {
+  color: rgb(161, 79, 79);
+}
+
+/* Sticky Header */
+.data-table2 .sticky-header {
+  position: sticky;
+  width: 100%;
+  top: 90px;
+  background: #463d4f;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover Effect for Rows */
+.data-table2 tr:hover {
+  background-color: #49434b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* General Cell Styling */
+.data-table2 td {
+  padding: 20px;
+  text-align: right;
+  color: #d1d1d1;
+  vertical-align: middle;
+  transition: background-color 0.3s ease;
+  height: 80px;
+}
+
+.data-table2 th {
+  padding: 20px;
+  border: none;
+  font-weight: normal;
+  font-size: 0.75rem;
+}
+
+.data-Coin div {
+  text-align: left;
+}
+
+.data-table2 td,
+.data-table2 span,
+.data-table2 div {
+  font-size: 0.75rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .data-table2 {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .DataTable2-container {
+    width: 100%;
+  }
+
+  .DataTable2-header {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .DataTable2-header,
+  .data-table2 th,
+  .data-table2 td {
+    height: 50px !important;
+  }
+  /* .header-Rank {
+    text-align: center;
+  } */
+
+  .data-table2 td.data-Rank span {
+    text-align: right;
+  }
+
+  .data-table2 .data-Coin .coin-icon {
+    width: 15px !important;
+    height: 15px !important;
+    margin-right: 10px !important;
+  }
+
+  .data-table2 .data-Coin .coin-name {
+    font-size: 0.5rem;
+  }
+
+  /* Hide certain columns on mobile */
+  .header-Market-Cap,
+  .header-Volume,
+  .header-1HR,
+  .header-7DAY,
+  .data-Market-Cap,
+  .data-Volume {
+    display: none;
+  }
+
+  .data-1HR,
+  .data-7DAY {
+    display: none;
+  }
+
+  /* Adjust font size for smaller screens */
+  .data-table2 th,
+  .data-table2 td,
+  .data-table2 span,
+  .data-table2 div {
+    font-size: 0.5rem;
+  }
+
+  /* Sticky Header for Mobile */
+  .data-table2 .sticky-header {
+    top: 60px;
+    height: 50px;
+  }
+}
+
+/* Hover Effect for Rows */
+.data-table2 tr:hover {
+  background-color: #49434b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

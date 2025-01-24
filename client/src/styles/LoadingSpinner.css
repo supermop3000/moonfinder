@@ -1,0 +1,65 @@
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.futuristic-spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.futuristic-spinner::before,
+.futuristic-spinner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+.futuristic-spinner::before {
+  border-top: 4px solid #00ffff;
+  border-left: 4px solid #00ffff;
+  animation: spin 1.5s linear infinite;
+}
+
+.futuristic-spinner::after {
+  border-bottom: 4px solid #ff00ff;
+  border-right: 4px solid #ff00ff;
+  animation: spin-reverse 2s linear infinite;
+}
+
+.futuristic-spinner::before,
+.futuristic-spinner::after {
+  box-shadow:
+    0 0 8px rgba(0, 255, 255, 0.8),
+    0 0 20px rgba(255, 0, 255, 0.8);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

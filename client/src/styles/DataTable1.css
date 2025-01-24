@@ -1,0 +1,365 @@
+/* Grid Container */
+.DataGrid-container {
+  max-width: 1270px;
+  margin: 0 auto;
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* background: linear-gradient(135deg, #141414, #1e1e2f);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); */
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 14px;
+  width: 80%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #222, #333);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-input:focus {
+  outline: none;
+  background: linear-gradient(135deg, #333, #444);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-buttons button {
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  /* font-weight: bold; */
+  color: #fff;
+  background: linear-gradient(135deg, #464646, #aaaaaa);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.toggle-buttons button:hover {
+  background: linear-gradient(135deg, #aaaaaa, #464646);
+  /* transform: translateY(-3px); */
+  /* box-shadow: 0 8px 20px rgba(0, 114, 255, 0.5); */
+}
+
+.toggle-buttons button:active {
+  transform: translateY(0);
+}
+
+/* Grid Layout */
+.data-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
+  grid-template-columns: 50px 300px repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  padding: 40px;
+  background: linear-gradient(135deg, #222, #333);
+  border-radius: 15px;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Header */
+.data-grid.header {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
+  grid-template-columns: 50px 300px repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  background: #141313;
+  text-transform: uppercase;
+  font-weight: bold;
+  /* border-bottom: 2px solid #444; */
+  padding: 20px 40px;
+  z-index: 20;
+}
+
+.data-grid.header.sticky-header {
+  position: sticky;
+  top: 90px;
+  background-color: #0f0f0f;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+  border-radius: 0 !important;
+  border-radius: 0px;
+}
+
+span.dt1-sort-arrow svg {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.data-grid-cell {
+  white-space: normal;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+span.data-grid-cell.MarketCap {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+span.data-grid-cell.Volume {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Specific to the rank column cells */
+.rank-column {
+  max-width: 50px; /* Set maximum width for the rank column */
+  text-align: center; /* Center align the text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowed content */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing content */
+}
+
+/* Specific to the rank column header */
+.rank-header {
+  max-width: 50px; /* Match the rank column width */
+  text-align: center; /* Align the header text */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-cell {
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+  font-size: 16px;
+}
+
+.header-cell:hover {
+  color: #00c6ff;
+  /* transform: translateY(-2px); */
+}
+
+/* Data Grid Row */
+.data-grid.row {
+  position: relative;
+  /* background: linear-gradient(135deg, #1e1e2f, #2a2a40); */
+  background: linear-gradient(135deg, #111112, #252525);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Background Image Element */
+.data-grid.row .row-background {
+  position: absolute;
+  top: 50%;
+  left: 98%;
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(70%) opacity(0.1);
+  transform: rotate(-15deg) translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Row Content */
+.data-grid.row > * {
+  position: relative;
+  font-size: 0.85rem;
+  z-index: 1;
+}
+
+.data-grid.row:hover {
+  /* transform: scale(1.05); */
+  /* box-shadow: 0 0px 30px rgba(166, 95, 174, 0.5); */
+  background: #343434;
+}
+
+.data-grid.row:hover .row-background {
+  /* Increase saturation on hover */
+  /* filter: grayscale(0%) opacity(0.5) saturate(2); */
+  filter: grayscale(0%) opacity(1) saturate(2);
+}
+
+/* Coin Container */
+.island-coin {
+  min-width: 300px; /* Ensure the cell has a wider minimum width */
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically center the content */
+  gap: 10px; /* Space between image and text */
+  /* font-size: 1rem; */
+  /* font-weight: bold; */
+  color: #fff;
+}
+
+.island-coin img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* box-shadow: 0 5px 15px rgba(0, 114, 255, 0.6); */
+}
+
+.island-coin span {
+  display: inline-block;
+  line-height: 1.2;
+  font-size: 0.85rem;
+}
+
+/* Positive and Negative Percentage Styles */
+.positive-percentage {
+  color: rgb(59 230 121);
+  /* font-weight: bold; */
+  /* text-shadow: 0 2px 4px rgba(40, 255, 133, 0.5); */
+}
+
+.negative-percentage {
+  color: #ff5f52;
+  /* font-weight: bold; */
+  /* text-shadow: 0 2px 4px rgba(255, 56, 92, 0.5); */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .data-grid.header {
+    display: grid;
+    grid-template-columns: 50px 40% repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    background: #141313;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* border-bottom: 2px solid #444; */
+    z-index: 20;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: 50px 40% repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    background: linear-gradient(135deg, #222, #333);
+    border-radius: 15px;
+    align-items: center;
+    color: #fff;
+    position: relative;
+  }
+
+  .island-coin span {
+    font-size: 0.6rem;
+  }
+
+  .data-grid-cell-percent {
+    font-size: 0.6rem;
+  }
+
+  .data-grid-cell.rank-column {
+    font-size: 0.6rem;
+  }
+
+  .header-cell {
+    font-size: 0.6rem;
+  }
+
+  .data-grid-cell.header-cell.\37 DAY {
+    display: none;
+  }
+
+  .data-grid-cell.header-cell.\31 HR {
+    display: none;
+  }
+
+  .data-grid-cell-percent.\31h {
+    display: none;
+  }
+
+  .data-grid-cell-percent.\37 d {
+    display: none;
+  }
+
+  .island-coin img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .toggle-buttons {
+    display: none;
+  }
+
+  .island-coin {
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+  }
+
+  .data-grid.row > * {
+    position: relative;
+    font-size: 0.6rem;
+    z-index: 1;
+  }
+
+  .data-grid.row .row-background {
+    position: absolute;
+    top: 50%;
+    left: 98%;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(70%) opacity(0.1);
+    transform: rotate(-15deg) translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .data-grid.header.sticky-header {
+    position: sticky;
+    top: 60px;
+    background-color: #0f0f0f;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    border-radius: 0 !important;
+    border-radius: 0px;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .data-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+} */

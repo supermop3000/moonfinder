@@ -1,0 +1,93 @@
+.asset-search-bar-alt {
+  position: relative; /* Parent container for the dropdown */
+  width: 100%;
+}
+
+.dropdown-results {
+  position: absolute;
+  width: 100%;
+  background-color: #4b4b4b;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: -2px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background-color: #4d334f;
+}
+
+.dropdown-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+/* Style for the entire scrollbar */
+.dropdown-results::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Style for the scrollbar track (background) */
+.dropdown-results::-webkit-scrollbar-track {
+  background: #2c2c2c; /* Dark gray background */
+  border-radius: 5px; /* Rounded edges */
+}
+
+/* Style for the scrollbar thumb (scroll indicator) */
+.dropdown-results::-webkit-scrollbar-thumb {
+  background: #6c63ff; /* Purple thumb */
+  border-radius: 5px; /* Rounded edges */
+  border: 2px solid #2c2c2c; /* Adds padding around thumb */
+}
+
+/* Style for the scrollbar thumb on hover */
+.dropdown-results::-webkit-scrollbar-thumb:hover {
+  background: #5245d4; /* Darker purple on hover */
+}
+
+/* Firefox-specific scrollbar styling */
+.dropdown-results {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #6c63ff #2c2c2c; /* Thumb and track colors */
+}
+
+/* Custom style for scrollbar arrows */
+.dropdown-results::-webkit-scrollbar-button {
+  background: #6c63ff; /* Arrow background */
+  border-radius: 5px;
+}
+
+/* Hover effect for scrollbar arrows */
+.dropdown-results::-webkit-scrollbar-button:hover {
+  background: #5245d4; /* Darker purple on hover */
+}
+
+@media (max-width: 768px) {
+  .add-swap label {
+    font-size: 16px;
+  }
+  .label_space {
+    font-size: 16px;
+  }
+
+  input.search-input::placeholder {
+    font-size: 12px;
+  }
+
+  input::placeholder {
+    font-size: 12px;
+  }
+}

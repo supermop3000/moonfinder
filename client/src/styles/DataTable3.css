@@ -1,0 +1,214 @@
+/* General Table Styling */
+.data-table3 {
+  width: 100%;
+  max-width: 1270px;
+  border-collapse: collapse;
+  border: none;
+  background: #0d0d0d;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.terminal-search {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #0d0d0d; /* Terminal-style background */
+  color: #00ff6a;
+  font-family: 'Courier New', Courier, monospace;
+  /* border-bottom: 1px solid #00ff6a; */
+  margin-bottom: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.terminal-search .prompt {
+  margin-right: 10px;
+  color: #00ff6a;
+}
+
+.terminal-search .terminal-input {
+  flex: 1;
+  padding: 5px;
+  background: #0d0d0d;
+  color: #00ff6a;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  caret-color: #00ff6a;
+}
+
+.data-table3 .data-Coin img {
+  display: none;
+}
+
+.DataTable3-container {
+  width: 100%;
+  max-width: 1270px;
+  margin: 0 auto;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Header Styling */
+.DataTable3-header {
+  background-color: #0d0d0d;
+  color: #00ff6a;
+  text-transform: uppercase;
+  font-weight: bold;
+  z-index: 10;
+  border-bottom: 1px solid #00ff6a;
+}
+
+/* Sorting Arrows */
+.sort-arrow svg {
+  font-size: 0.55rem !important;
+  color: #00ff6a;
+}
+
+/* Data Styling */
+.data-Rank {
+  text-align: center;
+}
+
+.data-table3 td span {
+  font-size: 0.7rem;
+}
+
+.data-table3 td {
+  padding: 10px;
+  text-align: right;
+  color: #d1d1d1;
+  vertical-align: middle;
+  transition: background-color 0.3s ease;
+  height: 20px;
+  font-size: 0.7rem;
+  color: #00ff6a;
+}
+
+.data-table3 th {
+  padding: 10px;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: normal;
+}
+
+.header-Price,
+.header-24HR,
+.header-1HR,
+.header-7DAY,
+.header-Market-Cap,
+.header-Volume,
+.header-Rank,
+.data-Price,
+.data-1HR,
+.data-24HR,
+.data-7DAY,
+.data-Market-Cap,
+.data-Volume {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.header-Coin {
+  text-align: left;
+}
+
+.data-table3 .data-Coin .coin-name,
+.data-table3 .data-Coin div,
+.data-table3 .data-Rank span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.7rem;
+  vertical-align: middle;
+}
+
+/* Positive and Negative Percentages */
+.data-table3 .positive-percentage {
+  color: #00ff6a;
+}
+
+.data-table3 .negative-percentage {
+  color: #ff3f3f;
+}
+
+/* Sticky Header */
+.DataTable3-header .sticky-header {
+  position: sticky;
+  width: 100%;
+  top: 90px;
+  background: #0d0d0d;
+  z-index: 100;
+  border-bottom: 1px solid #00ff6a;
+  box-shadow:
+    inset 0 0px 0 #00ff6a,
+    inset 0 -1px 0 #00ff6a;
+}
+
+.DataTable3-header .sticky-header:after,
+.sticky-header:before {
+  height: 1px;
+  background-color: #00ff6a;
+  z-index: 101;
+}
+
+/* Hover Effect for Rows */
+.data-table3 tr:hover {
+  background-color: #009c41;
+  color: black;
+  cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .data-table3 {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .DataTable3-container {
+    width: 100%;
+  }
+
+  .data-table3-header {
+    font-size: 0.75rem;
+  }
+
+  .data-table3 th.header-Rank {
+    text-align: right;
+  }
+
+  .data-table3 td.data-24HR span {
+    margin-right: 10px;
+  }
+  .data-table3 th.header-24HR {
+    padding-right: 20px;
+  }
+
+  /* Hide certain columns on mobile */
+  .data-Market-Cap,
+  .data-Volume,
+  .data-1HR,
+  .data-7DAY,
+  .header-Market-Cap,
+  .header-Volume,
+  .header-1HR,
+  .header-7DAY {
+    display: none;
+  }
+
+  .DataTable3-header .sticky-header {
+    position: sticky;
+    width: 100%;
+    top: 60px;
+    background: #0d0d0d;
+    z-index: 100;
+    font-size: 0.75rem;
+    border-bottom: 1px solid #00ff6a;
+  }
+
+  .terminal-search .terminal-input,
+  .terminal-input::placeholder {
+    font-size: 0.75rem;
+    color: #00ff6a;
+  }
+}

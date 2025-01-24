@@ -1,0 +1,792 @@
+.Hootfolio {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 600px;
+}
+
+.hootfolio-container {
+  background: linear-gradient(135deg, #724a76, #2e1550);
+  border-radius: 20px;
+  padding: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.hootfolio-container-selected {
+  background: linear-gradient(135deg, #724a76, #2e1550);
+  border-radius: 20px;
+  padding: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  /* transition: transform 0.3s, box-shadow 0.3s; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.wallet-name {
+  font-size: 1rem;
+}
+
+.hootfolio-total-value {
+  font-size: 1rem;
+}
+
+.wallet-name-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wallet-icon {
+  width: 48px;
+  height: 48px;
+}
+
+/* .hootfolio-container:hover .visibility-toggle {
+  opacity: 1;
+  pointer-events: all;
+} */
+
+/* .visibility-toggle {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ffffff;
+  transition: color 0.3s;
+  opacity: 0;
+} */
+
+.add-asset-button,
+.add-swap-button,
+.toggle-chart-button,
+.submit-button,
+.cancel-button {
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4b4454;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  margin: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cancel-button {
+  background-color: #d1003b;
+}
+
+.submit-button {
+  background-color: #00b897;
+}
+
+.cancel-button:hover {
+  background-color: #65001d;
+}
+
+.submit-button:hover {
+  background-color: #005545;
+}
+
+.add-asset-button.selected,
+.add-swap-button.selected {
+  background-color: #6a5acd;
+  color: white;
+}
+
+.hootfolio-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hootfolio-assets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.hootfolio-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hootfolio-asset-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hootfolio-asset {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #222;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease-in-out,
+    background 0.3s ease-in-out;
+}
+
+.hootfolio-asset.selected {
+  background: linear-gradient(135deg, #ff8a00, #ff007b);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.asset-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.asset-name {
+  flex: 2;
+  font-size: 16px;
+}
+
+.asset-name-price {
+  display: flex;
+  flex-direction: column; /* Stack name and market value */
+  flex-grow: 1; /* Take up remaining space */
+}
+
+.asset-market-value {
+  font-size: 0.6rem;
+  color: gray;
+  margin-top: 5px;
+}
+
+.asset-balance {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: white;
+}
+
+.asset-total-value {
+  text-align: center;
+  font-size: 16px;
+}
+
+.hootfolio-wrapper .selected-hootfolio-actions {
+  opacity: 1;
+}
+
+.selected-hootfolio-actions {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  right: -180px;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.edit-hootfolio-button,
+.regen-name-hootfolio-button,
+.delete-hootfolio-button,
+.visibility-toggle {
+  background: none;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.asset-actions {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.hootfolio-asset-wrapper .asset-actions {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-10px);
+}
+
+.edit-asset-button,
+.delete-asset-button {
+  background: none;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-asset-button.selected,
+.edit-hootfolio-button.selected,
+.regen-name-hootfolio-selected {
+  background-color: #008d3b;
+  color: white;
+}
+
+.hootfolio-name-input {
+  width: 250px;
+  border: 0px solid black;
+  outline: 0px solid black;
+  height: 40px;
+  padding: 5px;
+  font-size: 24px;
+  text-align: left;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgb(63, 26, 63);
+  color: white;
+}
+
+.hootfolio-name-input::-webkit-inner-spin-button,
+.hootfolio-name-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.editable-input {
+  width: 80px;
+  height: 30px;
+  border: none; /* Remove the border */
+  outline: none; /* Remove the default outline */
+  text-align: center; /* Center text */
+  appearance: none; /* Remove browser-specific styling */
+  background: linear-gradient(
+    135deg,
+    #ff8a00,
+    #ff007b
+  ); /* Match the gradient */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Softer shadow to match hover style */
+  color: white; /* Ensure text is readable */
+  font-size: 16px;
+  border-radius: 4px; /* Smooth corners */
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease; /* Smooth interactions */
+}
+
+input::selection {
+  background: rgba(19, 195, 189, 0.86); /* Semi-transparent white */
+  color: #ffffff; /* Complementary orange for text */
+}
+
+/* width:80px;
+  border: 0px solid black;
+  outline: 0px solid black;
+  height:30px;
+  text-align:center;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgb(136, 136, 136);
+  font-size: 16px;
+} */
+
+.editable-input::-webkit-inner-spin-button,
+.editable-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.hootfolio-asset-header {
+  background-color: #626262;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  align-items: center;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease;
+}
+
+.hootfolio-asset-header:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.hootfolio-asset-header span {
+  flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+.hootfolio-asset-header .asset-name {
+  text-align: left;
+  padding: 15px;
+  max-width: 80px;
+  cursor: pointer;
+}
+
+.hootfolio-asset-header .asset-balance {
+  cursor: pointer;
+}
+
+.hootfolio-asset-header .asset-total-value {
+  text-align: right;
+  padding: 15px;
+  max-width: 80px;
+  cursor: pointer;
+}
+
+/* ALTERNATE FORMATTING OPTION */
+.add-asset {
+  margin-bottom: 20px;
+  border: 1px dashed rgb(249, 202, 255);
+  padding: 40px;
+}
+
+.add-swap {
+  margin-bottom: 20px;
+  border: 1px dashed rgb(249, 202, 255);
+  padding: 40px;
+}
+
+.top-assets-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* END ALTERNATE FORMATTING OPTION */
+
+/* .add-asset{
+  margin-bottom: 20px;
+}
+
+.top-assets-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+} */
+
+/* .asset-button {
+  max-width: 110px;
+  width: 110px;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #222;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+} */
+
+.add-asset input:not([type='date']),
+.add-swap input:not([type='date']),
+.add-asset select,
+.add-swap select {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #222;
+  color: #ffffff;
+}
+
+.add-asset input[type='number'],
+.add-swap input[type='number'] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.add-asset input[type='number']::-webkit-inner-spin-button,
+.add-asset input[type='number']::-webkit-outer-spin-button,
+.add-swap input[type='number']::-webkit-inner-spin-button,
+.add-swap input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.swap-date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.swap-date {
+  width: 150px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #222;
+  color: #ffffff;
+}
+
+.add-swap label {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.label_space {
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.form-select-asset label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.form-enter-amount label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.form-enter-amount {
+  margin-top: 20px;
+}
+
+.add-swap {
+  display: flex;
+  flex-direction: column;
+}
+
+.swap-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.swap-column {
+  flex: 1;
+}
+
+.time-range-button {
+  background: linear-gradient(145deg, #2a2d34, #1e2027);
+  border: 1px solid #4a4e69;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #cfd2e1;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.time-range-button:active {
+  background: linear-gradient(145deg, #1e2027, #15171c);
+  border-color: #404366;
+  transform: scale(0.98);
+}
+
+.time-range-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px 2px rgba(99, 103, 162, 0.8);
+}
+
+.time-range-button.selected {
+  color: #ffffff;
+  border: 1px solid #6367a2;
+  box-shadow: 0 0 10px 0.1px rgba(99, 103, 162, 0.8);
+}
+
+.gainWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-top: -12px;
+  z-index: 10;
+  text-align: center;
+}
+
+.gainContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.gainPercent .gain,
+.gainValue .gain {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.gain {
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.gain.positive {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.gain.negative {
+  background-color: #f44336;
+  color: #fff;
+}
+
+/* NEEDED TO CREATE THIS SO ON HOVER EVENTS DO NOT TRIGGER ON TOUCH DEVICES
+ANY EVENT THAT I DONT WANT HOVER TO TRIGGER AFTER TOUCH NEEDS TO BE PUT HERE
+*/
+@media (hover: hover) {
+  .hootfolio-container:hover {
+    transform: scale(1.05);
+  }
+
+  .edit-asset-button.selected:hover,
+  .edit-hootfolio-button.selected:hover,
+  .regen-name-hootfolio-selected:hover {
+    background-color: #008d3b;
+    color: white;
+  }
+
+  .time-range-button:hover {
+    background: linear-gradient(145deg, #343942, #2c3039);
+    color: #ffffff;
+    border-color: #6367a2;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .hootfolio-asset:hover {
+    background: linear-gradient(135deg, #ff8a00, #ff007b);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  .add-asset-button:hover,
+  .add-swap-button:hover,
+  .toggle-chart-button:hover {
+    background-color: #6a5acd;
+  }
+
+  .visibility-toggle:hover {
+    color: #ffcc00;
+  }
+
+  .regen-name-hootfolio-button:hover {
+    background-color: #008d3b;
+    color: white;
+  }
+
+  .edit-asset-button:hover,
+  .edit-hootfolio-button:hover {
+    background: #ffc107;
+    color: #000000;
+  }
+
+  .delete-asset-button:hover,
+  .delete-hootfolio-button:hover {
+    background: #dc3545;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 768px) {
+  .Hootfolio {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .main-content {
+    padding-top: 0px;
+  }
+
+  .hootfolio-container {
+    padding: 20px;
+    /* width: 80%; */
+  }
+
+  .hootfolio-wrapper {
+    flex-direction: column;
+  }
+
+  .selected-hootfolio-actions {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    right: 0px;
+  }
+
+  .wallet-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .wallet-name {
+    font-size: 0.8rem;
+  }
+
+  .hootfolio-asset {
+    width: 100%;
+  }
+
+  .hootfolio-asset-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .asset-actions {
+    position: static;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    right: 0px;
+    transform: translateY(0) translateX(0) !important;
+    top: 0;
+  }
+
+  /* .hootfolio-asset.selected {
+    background: linear-gradient(135deg, #ff8a00, #ff007b);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  } */
+
+  .hootfolio-total-value {
+    font-size: 0.8rem;
+  }
+
+  .asset-market-value {
+    font-size: 0.5rem;
+    color: gray;
+    margin-top: 5px;
+  }
+
+  /* .visibility-toggle {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s;
+    opacity: 1;
+  } */
+
+  /* .visibility-toggle svg {
+    font-size: .7rem;
+  } */
+
+  .gainPercent .gain,
+  .gainValue .gain {
+    font-size: 0.7rem;
+    font-weight: normal;
+  }
+
+  .gainWrapper {
+    margin-top: -14px;
+  }
+
+  .add-asset-button,
+  .add-swap-button,
+  .toggle-chart-button,
+  .submit-button,
+  .cancel-button {
+    font-size: 0.5rem;
+  }
+
+  .hootfolio-asset-header {
+    padding: 15px;
+    height: 40px;
+    font-size: 0.7rem;
+  }
+
+  .asset-name {
+    font-size: 0.6rem;
+  }
+
+  .asset-balance {
+    font-size: 0.6rem;
+  }
+
+  .asset-total-value {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Hootfolio {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+}

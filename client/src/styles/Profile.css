@@ -1,0 +1,87 @@
+.Profile {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.profile-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  width: 300px;
+  margin: 0 20px;
+}
+
+.profile-box h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #00c6ff;
+}
+
+.profile-box p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.hootfolios-section {
+  margin-top: 20px;
+}
+
+.hootfolios-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #00c6ff;
+  text-align: center;
+}
+
+.hootfolio-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hootfolio-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; /* Add cursor pointer to indicate clickability */
+}
+
+.hootfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hootfolio-name {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+}

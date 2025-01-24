@@ -1,0 +1,816 @@
+.main-div-swap {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically centers content */
+  animation: backgroundAnimation 12s ease infinite;
+}
+
+p.moonswap-subtitle {
+  color: #bcaec5;
+  text-transform: lowercase;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.moonswap-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(
+    135deg,
+    #e91ec7,
+    #9c27b0,
+    #6724aa
+  ); /* Pink to Purple gradient */
+  /* background-size: 300% 300%; */
+  animation: backgroundAnimation 10s ease infinite; /* Animation for smooth background transition */
+  padding: 20px 20px; /* Add padding for more breathing room */
+  border-radius: 20px; /* Rounded corners for smooth edges */
+  box-shadow: 0 0 30px rgba(179, 30, 233, 0.8),
+    inset 0 0 60px rgba(201, 86, 250, 0.475); /* Glowing edges */
+}
+
+.moonswap-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: lowercase;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(181, 101, 221, 0.8),
+    0 0 20px rgba(176, 30, 233, 0.6), 0 0 30px rgba(145, 74, 252, 0.4); /* Glowing pink text */
+  letter-spacing: 2px; /* Slightly spaced out letters for futuristic feel */
+  animation: glowingEffect 2s ease-in-out infinite alternate; /* Glowing effect */
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glowing Animation */
+@keyframes glowingEffect {
+  0% {
+    text-shadow: 0px 0px 20px rgba(233, 30, 99, 0.8),
+      0px 0px 40px rgba(233, 30, 99, 0.6), 0px 0px 60px rgba(233, 30, 99, 0.4);
+  }
+  100% {
+    text-shadow: 0px 0px 30px rgba(156, 39, 176, 0.9),
+      0px 0px 50px rgba(156, 39, 176, 0.7), 0px 0px 70px rgba(156, 39, 176, 0.5);
+  }
+}
+
+/* Background Animation */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Swap Page Container */
+.swap-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  max-width: 800px;
+  z-index: 1;
+  /* backdrop-filter: blur(10px); */
+}
+
+/* Connect Wallet Section */
+.connect-wallet-section {
+  text-align: center;
+}
+
+.connect-wallet {
+  padding: 15px 30px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #0e74e6, #35c2e1); /* Clean gradient */
+  color: white;
+  box-shadow: 0 0px 30px rgba(14, 116, 230, 0.6),
+    inset 0 0 15px rgba(53, 194, 225, 0.4);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  backdrop-filter: blur(20px);
+  margin-right: 20px;
+  /* border: 2px solid rgba(255, 255, 255, 0.2); */
+}
+
+.connect-wallet:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0px 40px rgba(14, 116, 230, 0.8),
+    inset 0 0 25px rgba(53, 194, 225, 0.6);
+}
+
+.get-metamask {
+  padding: 15px 30px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f6851b, #e13535); /* Clean gradient */
+  color: white;
+  box-shadow: 0 0px 30px rgba(161, 58, 21, 0.6),
+    inset 0 0 15px rgba(225, 59, 53, 0.4);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  backdrop-filter: blur(20px);
+  /* border: 2px solid rgba(255, 255, 255, 0.2); */
+}
+
+.get-metamask:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0px 40px rgba(230, 82, 14, 0.8),
+    inset 0 0 25px rgba(225, 82, 53, 0.6);
+}
+
+/* Wallet Address */
+.wallet-address {
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: inline-block;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+}
+
+/* Swap Section */
+.swap-section {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #a3d4f7; /* Subtle highlight color */
+  text-shadow: 0 4px 10px rgba(163, 212, 247, 0.6);
+}
+
+/* Swap Boxes */
+.swap-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.token-box {
+  flex: 1;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Glass background */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5),
+    inset 0 0 15px rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.msp-box {
+  border: 2px solid #f353ec; /* Muted cyan */
+}
+
+.eth-box {
+  border: 2px solid #5ab1ef; /* Warm gold */
+}
+
+/* Token Headings */
+.token-heading {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+.swap-boxes {
+  margin-bottom: 40px;
+}
+
+/* Input Field */
+.swap-input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15); /* Glass effect */
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.swap-input::placeholder {
+  font-size: 0.8rem;
+}
+
+.swap-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(90, 177, 239, 0.8);
+}
+
+.swap-input::-webkit-inner-spin-button,
+.swap-input::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* For Chrome, Safari, Edge */
+  margin: 0; /* Optional: Reset margin */
+}
+
+.swap-input[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: textfield; /* Other browsers */
+}
+
+/* Remove the spinner in the input fields for better compatibility */
+.swap-input[type='number']::-webkit-outer-spin-button,
+.swap-input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows in Firefox */
+/* .swap-input[type="number"]::-moz-appearance: textfield; */
+
+/* Info Section */
+.info-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15); /* Glass effect */
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5),
+    inset 0 0 15px rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  backdrop-filter: blur(15px);
+}
+
+.info-block {
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  font-size: 1.1rem;
+  color: #ffffff;
+  /* text-transform: uppercase; */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 80%; /* Center align content visually */
+}
+
+.info-block.total {
+  background: linear-gradient(135deg, #8b53f3, #73f1f9);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  /* text-transform: uppercase; */
+  border: none;
+  width: 80%; /* Same width as other blocks */
+}
+
+/* Swap Button Section */
+.swap-button-section {
+  text-align: center;
+}
+
+.swap-button {
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #c95aef, #f7a3a3);
+  color: white;
+  box-shadow: 0 0px 30px rgb(210 90 239 / 80%),
+    inset 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.swap-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0px 40px rgb(239, 90, 199),
+    inset 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+/* Fireflies Container */
+/* Fireflies Container */
+.fireflies-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Prevent interaction */
+  z-index: 0;
+}
+
+/* Firefly */
+.firefly {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: moveFirefly 8s ease-in-out infinite,
+    glowFirefly 3s ease-in-out infinite;
+  animation-delay: calc(-5s * var(--random-delay));
+  mix-blend-mode: screen;
+  filter: blur(2px);
+}
+
+/* Variants for colors */
+.firefly:nth-child(3n) {
+  background: radial-gradient(
+    circle,
+    rgba(255, 105, 180, 0.9) 0%,
+    transparent 70%
+  );
+}
+
+.firefly:nth-child(4n) {
+  background: radial-gradient(
+    circle,
+    rgba(238, 130, 238, 0.9) 0%,
+    transparent 70%
+  );
+}
+
+.firefly:nth-child(5n) {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9) 0%,
+    transparent 70%
+  );
+}
+
+/* Firefly Movement Animation */
+@keyframes moveFirefly {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(
+      calc(40vw * var(--random-x)),
+      calc(40vh * var(--random-y))
+    );
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Firefly Glow Animation */
+@keyframes glowFirefly {
+  0%,
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.8),
+      0 0 20px rgba(238, 130, 238, 0.6);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9),
+      0 0 40px rgba(255, 105, 180, 0.7);
+  }
+}
+
+/* Wallet Info Section */
+.wallet-info-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Wallet Details */
+.wallet-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Wallet Address Box */
+.wallet-box {
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Glass background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5),
+    inset 0 0 8px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  width: 80%;
+  max-width: 500px;
+}
+
+.wallet-box .wallet-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.wallet-address-display {
+  font-size: 1rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.wallet-address-text {
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+/* Wallet Balances Section */
+.wallet-balances {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Balance Box */
+.balance-box {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08); /* Subtle glass background */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3),
+    inset 0 0 6px rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.balance-box.msp-box {
+  border-color: #f353ec; /* MSP-specific color */
+}
+
+.balance-box.eth-box {
+  border-color: #5ab1ef; /* ETH-specific color */
+}
+
+.wallet-token-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.balance-display {
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.token-symbol {
+  font-size: 0.8rem; /* Smaller size for token symbol */
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #b0b0b0; /* Light gray for token symbol */
+}
+
+.swap-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.swap-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #333333;
+  border-radius: 50%;
+  background: radial-gradient(circle, #444, #1a1a1a);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.swap-icon-svg {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+}
+
+/* Moonswap Details Section */
+/* Moonswap Details Section */
+/* Moonswap Details Section */
+.moonswap-details-section {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  width: 70%;
+  margin: 0px auto;
+  background: linear-gradient(135deg, #c95aef36, #f7a3a33d);
+
+  transition: all 0.3s ease;
+}
+
+/* Moonswap Details Section Header */
+.moonswap-details-section h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: #d397c9;
+  text-shadow: none;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+
+/* Moonswap Details */
+.moonswap-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reduced gap between boxes */
+  align-items: center;
+  overflow: hidden;
+  max-height: 0; /* Initially hidden */
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+/* Expanded state for Moonswap Details */
+.moonswap-details.expanded {
+  max-height: 1000px; /* Adjust to fit your content */
+  opacity: 1;
+}
+
+/* Moonswap Box */
+.moonswap-box,
+.moonswap-address-box {
+  padding: 5px; /* Reduced padding */
+  border-radius: 6px; /* Slightly smaller border radius */
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 80%;
+  /* max-width: 300px; */
+}
+
+.moonswap-address-box {
+  margin-top: 20px;
+}
+
+/* Moonswap Heading */
+.moonswap-heading {
+  font-size: 0.8rem; /* Smaller font size for headings */
+  font-weight: bold;
+  margin-bottom: 4px; /* Smaller margin */
+  color: #cbafe3;
+  text-transform: lowercase;
+}
+
+/* Moonswap Address Display */
+.moonswap-address-display p {
+  font-size: 0.75rem; /* Smaller font size for values */
+}
+
+/* Moonswap Info Display */
+.moonswap-info-display p {
+  font-size: 0.75rem;
+  color: #ffffff;
+}
+
+/* When the section is clicked, apply the expanded class to reveal the details */
+.moonswap-details-section.active h2 {
+  color: #f7a3a3; /* Highlight color when active */
+}
+
+.swap-details-link {
+  color: #ffffff; /* Change to your desired color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold (optional) */
+  font-size: 0.75rem;
+}
+
+.swap-details-link:hover {
+  color: #ffb3b3; /* Hover color (optional) */
+  text-decoration: none; /* Optional: add underline on hover */
+}
+
+/* Mobile Screen Styles */
+@media screen and (max-width: 768px) {
+  .main-div-swap {
+    padding: 10px;
+  }
+  .moonswap-title {
+    font-size: 1.5rem; /* Smaller title for mobile */
+  }
+
+  .wallet-info-section {
+    margin-bottom: 30px;
+  }
+
+  .wallet-details {
+    width: 100%;
+  }
+
+  .wallet-box .wallet-heading,
+  .wallet-token-heading {
+    font-size: 0.6rem;
+  }
+
+  .wallet-box {
+    width: 100%;
+  }
+
+  .moonswap-header {
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .get-metamask {
+    font-size: 0.5rem;
+  }
+
+  .wallet-address-text {
+    font-size: 0.65rem;
+    color: #ffffff;
+  }
+
+  .swap-page-container {
+    width: 100%;
+    gap: 0px;
+    max-width: none; /* Allow full width on mobile */
+  }
+
+  .info-block,
+  .info-block.total {
+    font-size: 0.6rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 40px;
+    text-align: center;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+  }
+
+  .moonswap-details-section h2 {
+    font-size: 0.6rem;
+  }
+
+  .moonswap-details-section {
+    padding: 15px;
+  }
+
+  /* Info Section */
+  .info-section {
+    width: 100%;
+    gap: 15px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex; /* Enables flexbox */
+    flex-direction: row; /* Aligns items in a row */
+    justify-content: center; /* Centers content horizontally in the section */
+  }
+
+  .swap-icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  p.moonswap-subtitle {
+    font-size: 0.65rem;
+  }
+
+  .swap-input::placeholder {
+    font-size: 0.5rem;
+  }
+
+  .swap-button {
+    margin-top: 50px;
+    font-size: 0.8rem;
+    margin-bottom: 50px;
+  }
+
+  .moonswap-details-section {
+    width: 100%;
+  }
+  .moonswap-info-display p {
+    font-size: 0.65rem;
+  }
+
+  .moonswap-heading {
+    font-size: 0.65rem;
+  }
+
+  .moonswap-box,
+  .moonswap-address-box {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .swap-details-link {
+    font-size: 0.6rem;
+  }
+
+  .token-box {
+    flex: 1;
+    padding: 20px;
+    margin-bottom: 10px; /* Add margin to separate the boxes */
+    text-align: center;
+  }
+
+  .token-symbol {
+    font-size: 0.5rem; /* Smaller size for token symbol */
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .token-box h3 {
+    font-size: 0.75rem;
+  }
+
+  .token-box span {
+    font-size: 0.55rem;
+  }
+
+  .token-box input {
+    /* font-size: 0.65rem; */
+    font-size: 16px;
+  }
+
+  .swap-boxes {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+    gap: 20px; /* Stack the input fields vertically */
+  }
+
+  .swap-input {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .wallet-balances {
+    flex-direction: column;
+    gap: 20px; /* Stack the wallet balance boxes vertically */
+  }
+
+  /* Reduce padding for smaller screens */
+  .wallet-box,
+  .balance-box {
+    padding: 10px;
+  }
+
+  .fireflies-container {
+    height: 100%; /* Ensure it takes full height */
+    width: 100%;
+  }
+}

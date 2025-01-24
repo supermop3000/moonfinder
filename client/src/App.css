@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 22px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1d1d1d;
+  color: #f1f1f1;
+  /* height: fit-content; */
+}
+
+.App {
+  font-family: 'Roboto', sans-serif;
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #131313;
+  height: 90px;
+  color: rgb(160 160 255);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar {
+  max-width: 1270px;
+  width: 100%;
+}
+
+.App-logo {
+  height: 45px;
+  width: auto;
+  animation: App-logo-spin infinite 20s linear;
+  margin-right: 5px;
+}
+
+a.App-title {
+  /* color: #af70ff; */
+  color: rgb(199 199 199) !important;
+  margin-right: 30px;
+  padding: 0 !important;
+}
+
+.header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  background-color: #866ea4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  /* height: 50px; */
+  padding: 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #58486b;
+}
+
+.profile-button {
+  /* margin-left: 10px; */
+  display: flex;
+  align-items: center;
+  /* background-color: #866ea4; */
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  /* padding: 7px; */
+  font-size: 0.55rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button {
+  align-items: center;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  /* height: 50px; */
+  width: 100px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #991919;
+}
+
+.App-text {
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar li.selected a {
+  color: #c36aff;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar a {
+  color: #9881b3;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.navbar a:hover {
+  color: #af70ff;
+}
+
+.main-content {
+  margin-top: 40px;
+  width: 1270px;
+}
+
+.asset-selection-buttons button {
+  font-size: 16px;
+  padding: 15px;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.asset-selection-buttons button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.asset-selection-buttons button.selected {
+  background-color: #004085;
+}
+
+.submit-button,
+.cancel-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+} /* Profile container */
+.profile-container {
+  position: relative; /* Ensures dropdown positions relative to the container */
+  display: inline-block;
+}
+
+.user-icon {
+  font-size: 1.8rem; /* Same size as the other icons */
+  color: #ffffff;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Ensures all icons have the same width */
+  height: 40px; /* Ensures all icons have the same height */
+  font-size: 2rem; /* Adjust the size of icons */
+}
+
+/* User button */
+.profile-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* .user-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+} */
+.profile-container {
+  position: relative; /* Establish positioning context for dropdown */
+  display: inline-block;
+}
+
+/* Button */
+.profile-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* .user-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+} */
+
+/* Dropdown container */
+.profile-dropdown-container {
+  position: absolute; /* Position relative to parent */
+  top: 100%; /* Align below the button */
+  right: 0; /* Align with the right edge of the parent */
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+.profile-dropdown-container.visible {
+  display: block; /* Make dropdown visible */
+}
+
+/* Profile dropdown menu */
+.profile-dropdown-menu {
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 150px;
+}
+
+/* Dropdown item */
+.profile-dropdown-item {
+  background: none;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+
+.profile-dropdown-item:hover {
+  background: #7b5c7e;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .App-header {
+    margin-top: 0px;
+    display: flex;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    line-height: 0.6rem;
+    padding-left: 10px;
+  }
+
+  .App-logo {
+    height: 30px;
+  }
+
+  .App-title {
+    font-size: 0.7rem !important;
+    padding: 0;
+  }
+
+  .navbar {
+    width: 100%;
+    margin-left: 0px;
+    gap: 0px;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* .navbar a {
+    font-size: .6rem;
+  } */
+
+  .navbar ul {
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    justify-content: right;
+  }
+
+  /* .navbar li {
+    font-size: 0.5rem;            
+  } */
+
+  .header-buttons {
+    display: block;
+  }
+
+  .user-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+
+  .logout-button {
+    height: 40px;
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+}
+
+/* @media (max-width: 480px) {
+
+} */
