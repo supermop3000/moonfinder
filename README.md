@@ -26,10 +26,6 @@ MoonFinder is a digital asset tracking platform.
 - **Ethereum wallet integration** for real-time balance and transaction tracking.
 - **User-friendly transfers**: Decentralized asset transfers using recipient usernames.
 
-### **📄 NLP-Powered Document Processing**
-- Upload documents and let **Natural Language Processing (NLP)** fill in forms automatically.
-- Streamline your workflows with intelligent data extraction.
-
 ---
 
 ## **Technology Stack**
