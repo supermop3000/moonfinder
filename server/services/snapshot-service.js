@@ -7,13 +7,6 @@ const { Pool } = pkg; // Destructure the Pool class from the imported module
 
 // import { Pool } from 'pg';
 // dotenv.config();
-const pool = new Pool({
-  user: process.env.DB_USER || 'moonfinderpg',
-  host: process.env.DB_HOST || '3.23.66.181',
-  database: process.env.DB_NAME || 'moonfinder_db',
-  password: process.env.DB_PASSWORD || 'moon',
-  port: process.env.DB_PORT || 5432,
-});
 
 export default pool;
 
