@@ -6,16 +6,6 @@ import fs from 'fs';
 
 dotenv.config();
 
-const { Pool } = pg;
-
-const pool = new Pool({
-  host: '3.23.66.181',
-  user: 'moonfinderpg',
-  password: 'moon',
-  database: 'moonfinder_db',
-  port: 5432,
-});
-
 // const imageDir = path.resolve('images', 'coins');
 const imageDir = '/Users/pluto/Desktop/moon-finder-coins/images/coins';
 // const imageDir = '/var/www/moonfinder/images/coins';
