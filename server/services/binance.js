@@ -9,15 +9,6 @@ dotenv.config();
 const BASE_URL = 'https://api.binance.us';
 const EXCHANGE_ID = 1; // Replace with your actual exchange_id value from exchange_info
 
-const { Pool } = pg;
-const pool = new Pool({
-  host: '3.23.66.181',
-  user: 'moonfinderpg',
-  password: 'moon',
-  database: 'moonfinder_db',
-  port: 5432,
-});
-
 // Batch insert trading pair price history
 const insertBatchPriceHistory = async (priceHistory) => {
   const query = `
